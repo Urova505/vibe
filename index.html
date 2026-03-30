@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вайб-кодинг для педагогов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: #161b22;
+            --accent-purple: #a371f7;
+            --accent-blue: #58a6ff;
+            --text-main: #c9d1d9;
+            --text-bright: #ffffff;
+            --nav-bg: rgba(13, 17, 23, 0.95);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Компактная прижатая навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: var(--nav-bg);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            border-bottom: 1px solid #30363d;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: center;
+            padding: 12px 0;
+            gap: 20px;
+        }
+
+        nav a {
+            color: var(--text-main);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-blue);
+        }
+
+        /* Компактная шапка */
+        header {
+            padding: 80px 0 30px; /* Сильно уменьшил отступы */
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--text-bright);
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1rem;
+            color: #8b949e;
+        }
+
+        /* Секции с минимальными отступами */
+        section {
+            padding: 25px 0; /* Компактные отступы между разделами */
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-bright);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #30363d;
+        }
+
+        /* Списки и текст */
+        .info-block {
+            margin-bottom: 15px;
+        }
+
+        .info-block strong {
+            color: var(--accent-purple);
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        /* Игротека */
+        .iframe-wrapper {
+            width: 100%;
+            height: 450px;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #30363d;
+            margin-top: 15px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Подарок */
+        .gift-section {
+            text-align: center;
+            background: linear-gradient(180deg, #161b22 0%, #0d1117 100%);
+            border: 2px dashed #30363d;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-blue);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 15px 0;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .instruction-list {
+            text-align: left;
+            font-size: 0.9rem;
+            background: rgba(0,0,0,0.2);
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        footer {
+            padding: 30px 0;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #8b949e;
+        }
+
+        @media (max-width: 600px) {
+            .grid { grid-template-columns: 1fr; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="container">
+        <a href="#intro">Что это?</a>
+        <a href="#why">Зачем это учителю?</a>
+        <a href="#examples">Примеры</a>
+        <a href="#download">Подарок</a>
+    </div>
+</nav>
+
+<header id="intro">
+    <div class="container">
+        <h1>Создание цифровых уроков без знания кода</h1>
+        <p>Vibe Coding для педагога</p>
+    </div>
+</header>
+
+<div class="container">
+    
+    <section>
+        <h2>🚀 Что такое вайб-кодинг?</h2>
+        <div class="content-card">
+            <p class="info-block">Это новый подход к созданию программ, где вы выступаете не как программист, а как <b>режиссер или архитектор</b>. Вы просто объясняете нейросети словами, что должен делать ваш идеальный тренажер или тест, и она мгновенно превращает ваши мысли в рабочий код.</p>
+            <div class="grid">
+                <div class="info-block">
+                    <strong>Программирование на языке смыслов</strong>
+                    Вам не нужно учить прграммирование. Главное — ваша педагогическая задумка и «вайб» (настроение) проекта.
+                </div>
+                <div class="info-block">
+                    <strong>Мгновенный результат</strong>
+                    Видите изменения сразу. Ошибка в коде? Нейросеть сама её исправит по вашему замечанию.
+                </div>
+            </div>
+            <p style="font-size: 0.9rem; margin-top: 10px;">Вайб-кодинг — это когда технология становится не барьером, а инструментом творчества педагога-гуманитария. 🎨</p>
+        </div>
+    </section>
+
+    <section id="why">
+        <h2>💡 Почему это важно для педагога?</h2>
+        <div class="content-card">
+            <p class="info-block">Традиционные платформы часто ограничивают нас жесткими рамками. Вайб-кодинг даёт абсолютную свободу в методике преподавания:</p>
+            
+            <div class="info-block">
+                <strong>🏠 Полная автономность и офлайн</strong>
+                Это ключевой плюс! Созданный вами материал — это обычный файл. Его можно запустить <b>без интернета</b> прямо с флешки или рабочего стола. Урок не сорвется из-за сбоев в сети.
+            </div>
+
+            <div class="grid">
+                <div class="info-block">
+                    <strong>⚡ Экономия времени</strong>
+                    Больше не нужно часами искать «тот самый» шаблон. Вы создаете свой уникальный продукт за 10–15 минут.
+                </div>
+                <div class="info-block">
+                    <strong>💎 Авторский бренд</strong>
+                    Ваши материалы выглядят современно и стильно, повышая вовлеченность учеников и ваш авторитет.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="examples">
+        <h2>🎮 Примеры и форматы</h2>
+        <div class="content-card">
+            <p>Одним из самых эффективных форматов является <b>Игротека</b> — это удобная навигационная панель, которая объединяет разные учебные модули в единую систему.</p>
+            
+            <div class="iframe-wrapper">
+                <iframe src="https://urova505.github.io/Igroteka/"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <section id="download">
+        <h2>🎁 Скачайте подарок</h2>
+        <div class="content-card gift-section">
+            <h3>Геймифицируйте ваше занятие!</h3>
+            <p>Заберите готовую интерактивную игру, которую можно использовать в классе прямо сейчас.</p>
+            
+            <a href="https://disk.yandex.ru/d/k8RsafQiAN72Zg" class="btn">📥 Скачать игру (HTML)</a>
+            
+            <div class="instruction-list">
+                <p><b>Как запустить игру (краткая инструкция):</b></p>
+                <p>1. Скачайте файл по кнопке выше.</p>
+                <p>2. Если файл в архиве — извлеките его (правой кнопкой -> Извлечь).</p>
+                <p>3. Просто нажмите дважды на файл с окончанием .html (он откроется в любом браузере).</p>
+                <p>4. Для работы игры <b>интернет не требуется</b> — смело используйте в классе!</p>
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<footer>
+    <div class="container">
+        Гайд по вайб-кодингу для педагогов &bull; 2026
+    </div>
+</footer>
+
+</body>
+</html>
